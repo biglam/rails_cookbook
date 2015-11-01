@@ -27,7 +27,15 @@
   <p>New ingredients must be <%= link_to 'created', new_ingredient_path %> before they can be selected</p>
   <%#= f.collection_select :ingredients, Ingredient.order(:name), :id, :name, include_blank: false %>
   <%#ß= collection_check_boxes(:recipe, :ingredients, Ingredients.all, :id, :name %>
-  <%= f.collection_check_boxes(:ingredient_ids, Ingredient.order(:name), :id, :name) %>
+  <%#w= f.collection_check_boxes(:ingredient_ids, Ingredient.order(:name), :id, :name) %>
+
+  <% Ingredient.all.each do |ingredient| %>
+  <%= hidden_field_tag "recipe[ingredient_ids][]", nil %>
+  <%= check_box_tag "recipe[ingredient_ids][]", ingredient.id, @recipe.ingredient_ids.include?(ingredient.id), id: dom_id(ingredient) %>
+  <%= label_tag dom_id(ingredient), ingredient.name %>
+  <br>
+  <% end %>
+
   </div>
   <div class="actions">
     <%= f.submit %>

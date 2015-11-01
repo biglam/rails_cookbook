@@ -21,8 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
+    <%= f.collection_select :category_id, Category.order(:id),:id,:name, include_blank: false %>
   </div>
+  <%#= f.collection_select :ingredients, Ingredient.order(:name), :id, :name, include_blank: false %>
+  <%#ß= collection_check_boxes(:recipe, :ingredients, Ingredients.all, :id, :name %>
+  <%= f.collection_check_boxes(:ingredients, Ingredient.order(:name), :id, :name) %>
   <div class="actions">
     <%= f.submit %>
   </div>

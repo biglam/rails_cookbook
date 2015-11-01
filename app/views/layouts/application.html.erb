@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header"><h1>Recipe Book</h1></div>
+<div class="wrapper">
+<div class="style1">
 <%= render partial: 'layouts/sitemenu' %>
+</div>
 <%= yield %>
-
+</div>
 </body>
 </html>

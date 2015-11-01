@@ -1,9 +1,20 @@
-<ul>
+<div class="sitemenu">
+<table>
+<tr>
+<td><ul>
   <li><%= link_to('Categories', categories_path) %></li>
-  <li><%= link_to('New Category', new_category_path) %></li>
   <li><%= link_to('Recipes', recipes_path) %></li>
-  <li><%= link_to 'New recipe', new_recipe_path %></li>
   <li><%= link_to('Ingredients', ingredients_path) %></li>
-  <li><%= link_to('New Ingredient', new_ingredient_path) %></li>
 </ul>
+</td>
+<td>
+<ul>
+<li><%= link_to('New Category', new_category_path) %></li>
+<li><%= link_to 'New recipe', new_recipe_path %></li>
+<li><%= link_to('New Ingredient', new_ingredient_path) %></li>
+</ul>
+</td>
+</tr>
+</table>
 
+</div>

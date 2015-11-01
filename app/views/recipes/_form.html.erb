@@ -29,12 +29,7 @@
   <%#ß= collection_check_boxes(:recipe, :ingredients, Ingredients.all, :id, :name %>
   <%#w= f.collection_check_boxes(:ingredient_ids, Ingredient.order(:name), :id, :name) %>
 
-  <% Ingredient.all.each do |ingredient| %>
-  <%= hidden_field_tag "recipe[ingredient_ids][]", nil %>
-  <%= check_box_tag "recipe[ingredient_ids][]", ingredient.id, @recipe.ingredient_ids.include?(ingredient.id), id: dom_id(ingredient) %>
-  <%= label_tag dom_id(ingredient), ingredient.name %>
-  <br>
-  <% end %>
+  <%= render partial: 'recipes/ingredientslist' %>
 
   </div>
   <div class="actions">

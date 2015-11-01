@@ -18,7 +18,7 @@
   <strong>Ingredients:</strong>
   <ul>
     <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
+    <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
     <% end %>
   </ul>
 </p>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+div.sitemenu ul {
+  list-style: none
+}
+
+div.header {
+  background-color: lightblue;
+  padding: 30px;
+}
+
+div.wrapper {
+  background: linear-gradient(lightblue, white);
+}

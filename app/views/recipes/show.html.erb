@@ -17,8 +17,11 @@
 <p>
   <strong>Ingredients:</strong>
   <ul>
-    <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
+    <%# @recipe.ingredients.each do |ingredient| %>
+    <!-- <li><%#= link_to ingredient.name, ingredient_path(ingredient) %></li> -->
+    <%# end %>
+    <% @recipe.quantities.each do |quantity| %>
+      <%= quantity.ingredient.try(:name) %> - <%= quantity.quantity %><br>
     <% end %>
   </ul>
 </p>

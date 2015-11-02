@@ -38,23 +38,24 @@ peas = Ingredient.create!(name: 'Peas')
 beef = Ingredient.create!(name: 'Beef')
 pastry = Ingredient.create!(name: 'Pastry')
 
-chicken_soup.ingredients << chicken
-chicken_soup.ingredients << water
-porridge.ingredients << milk
-porridge.ingredients << water
-sandwich.ingredients << chicken
-sandwich.ingredients << ham
-sandwich.ingredients << bread
-peasoup.ingredients << water
-peasoup.ingredients << peas
-steakbake.ingredients << beef
-steakbake.ingredients << pastry
-steak.ingredients << beef
-curry.ingredients << rice
-curry.ingredients << chicken
-curry.ingredients << beef
-steakpie.ingredients << pastry
-steakpie.ingredients << beef
-angeldelight.ingredients << milk
-ricepudding.ingredients << rice
-ricepudding.ingredients << rice
+# chicken_soup.quantities.create!(ingredient: i, quantity: 'some')
+chicken_soup.quantities.create!(ingredient: chicken, quantity: 'some')
+chicken_soup.quantities.create!(ingredient: water, quantity: 'some')
+porridge.quantities.create!(ingredient: milk, quantity: 'some')
+porridge.quantities.create!(ingredient: water, quantity: 'some')
+sandwich.quantities.create!(ingredient: chicken, quantity: 'some')
+sandwich.quantities.create!(ingredient: ham, quantity: 'some')
+sandwich.quantities.create!(ingredient: bread, quantity: 'some')
+peasoup.quantities.create!(ingredient: water, quantity: 'some')
+peasoup.quantities.create!(ingredient: peas, quantity: 'some')
+steakbake.quantities.create!(ingredient: beef, quantity: 'some')
+steakbake.quantities.create!(ingredient: pastry, quantity: 'some')
+steak.quantities.create!(ingredient: beef, quantity: 'some')
+curry.quantities.create!(ingredient: rice, quantity: 'some')
+curry.quantities.create!(ingredient: chicken, quantity: 'some')
+curry.quantities.create!(ingredient: beef, quantity: 'some')
+steakpie.quantities.create!(ingredient: pastry, quantity: 'some')
+steakpie.quantities.create!(ingredient: beef, quantity: 'some')
+angeldelight.quantities.create!(ingredient: milk, quantity: 'some')
+ricepudding.quantities.create!(ingredient: rice, quantity: 'some')
+ricepudding.quantities.create!(ingredient: rice, quantity: 'some')

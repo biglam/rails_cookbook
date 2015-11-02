@@ -1,0 +1,6 @@
+<h1>Last Viewed</h1>
+<ul>
+<% Recipe.all.order('last_viewing DESC LIMIT 5').each do |recipe| %>
+<li><%= link_to(recipe.name, recipe_path(recipe)) %></li>
+<% end %>
+</ul>

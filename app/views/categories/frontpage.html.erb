@@ -1,0 +1,3 @@
+<% Recipe.all.order('last_viewing DESC LIMIT 5').each do |recipe| %>
+<%= recipe.name %>
+<% end %>

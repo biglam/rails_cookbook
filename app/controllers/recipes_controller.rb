@@ -10,6 +10,9 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    # binding.pry;''
+    @recipe.last_viewing = Time.new
+    @recipe.save
   end
 
   # GET /recipes/new

@@ -1,9 +1,13 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :create]
-
+  # load_and_authorize_resource
   # GET /recipes
   # GET /recipes.json
+  def tops
+
+  end
+
   def index
     @recipes = Recipe.all
   end
@@ -15,6 +19,7 @@ class RecipesController < ApplicationController
     @recipe.last_viewing = Time.new
     @recipe.save
   end
+
 
   # GET /recipes/new
   def new

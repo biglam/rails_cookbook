@@ -1,0 +1,9 @@
+<h2>Ingredient Usage</h2>
+<ul>
+<% list = Ingredient.joins(:recipes).group('ingredients.id').count %>
+<% list = list.sort_by {|k, v| v}.reverse %>
+<% list.take(5).each do |k,v| %>
+  <% ing = Ingredient.find(k)  %>
+<li><%= link_to(ing.name, ingredient_path(ing.id)) %> - <%= v %></li>
+<% end %>
+</ul>

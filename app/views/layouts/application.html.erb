@@ -8,7 +8,7 @@
 </head>
 <body>
 <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<p class="alert"><% if alert != nil %><%= image_tag('https://pbs.twimg.com/profile_images/493711513027215361/C3Y4e550_normal.png') %><% end %><%= alert %></p>
 <div class="header"><h1>Recipe Book</h1></div>
 <div class="wrapper">
 <div class="style1">

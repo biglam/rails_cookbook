@@ -10,6 +10,7 @@
 Category.delete_all
 Recipe.delete_all
 Ingredient.delete_all
+Quantity.delete_all
 
 breakfast = Category.create!(name: 'Breakfast')
 starter = Category.create!(name: 'Starters')

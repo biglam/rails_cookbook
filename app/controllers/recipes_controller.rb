@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
   def show
     # binding.pry;''
     @recipe.last_viewing = Time.new
+    @recipe.viewcount += 1
     @recipe.save
   end
 

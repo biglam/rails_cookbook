@@ -60,3 +60,8 @@ steakpie.quantities.create!(ingredient: beef, quantity: 'some')
 angeldelight.quantities.create!(ingredient: milk, quantity: 'some')
 ricepudding.quantities.create!(ingredient: rice, quantity: 'some')
 ricepudding.quantities.create!(ingredient: rice, quantity: 'some')
+
+Recipe.all.each do |recipe|
+recipe.viewcount = 0  
+recipe.save  
+end  

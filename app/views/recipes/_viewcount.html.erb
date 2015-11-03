@@ -1,0 +1,6 @@
+<h2>Most Viewed</h2>
+<ul>
+<% Recipe.order(viewcount: :desc).limit(5).each do |recipe| %>
+<li><%= link_to(recipe.name, recipe_path(recipe.id)) %> - <%= recipe.viewcount %> </li>
+<% end %>
+</ul>

@@ -32,6 +32,10 @@
   <%#= render partial: 'recipes/ingredientslist' %>
 
   </div>
+  <div class="field">
+    <%= f.label :recipe_image %><br />
+    <%= f.file_field :recipe_image %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -6,4 +6,6 @@ class Recipe < ActiveRecord::Base
 
   validates :name, length: { minimum: 2}
   validates :name, uniqueness: true
+
+  mount_uploader :recipe_image, RecipeImageUploader
 end

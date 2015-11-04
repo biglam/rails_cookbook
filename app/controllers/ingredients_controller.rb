@@ -1,6 +1,7 @@
 class IngredientsController < ApplicationController
   before_action :set_ingredient, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :create]
+  load_and_authorize_resource
 
   # GET /ingredients
   # GET /ingredients.json

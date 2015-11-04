@@ -7,6 +7,10 @@ class Ability
        can :manage, :all
    else
        can :read, Recipe
+       can :read, Category
+       can :read, Ingredient
+       can :read, Quantity
+       can :tops, Recipe
    end
 
 

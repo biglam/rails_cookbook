@@ -19,8 +19,8 @@
         <td><%= recipe.instructions %></td>
         <td><%= link_to recipe.category.name, category_path(recipe.category) %></td>
         
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) if can? :edit, @recipe %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, @recipe %></td>
       </tr>
     <% end %>
   </tbody>

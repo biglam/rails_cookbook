@@ -19,10 +19,43 @@ div.sitemenu ul {
 }
 
 div.header {
-  background-color: lightblue;
-  padding: 30px;
+  background-image: url("http://silviahartmann.com/background-tile-art/images/rosy-sky-watercolor.jpg");
+  padding: 15px;
+  color: white;
+}
+
+div.header h1 {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-size: 4em;
 }
 
 div.wrapper {
   background: linear-gradient(lightblue, white);
+  padding: 15px;
+}
+
+body {
+  margin: 0px;
+}
+
+ul.menu {
+  background-color: black;
+  margin: 0;
+  list-style-type: none;
+  padding: 5px 0;
+}
+
+ul.menu li {
+    display: inline;
+    padding: 0 15px;
+}
+
+ul.menu a {
+  color: white;
+}
+
+div.topslist {
+  float: left;
+  margin: 25px;
 }
